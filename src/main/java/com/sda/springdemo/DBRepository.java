@@ -1,9 +1,11 @@
 package com.sda.springdemo;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 //jak zrobić zapis odczyt w bazie
-@Component
+@Primary
+@Component("DB")
 public class DBRepository implements Repository{
 
     public DBRepository() {
