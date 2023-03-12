@@ -4,13 +4,19 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.util.Scanner;
+
 //jak zrobić odczyt/ zapis w pliku
 @Component("File")
 @Scope(scopeName = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class FileRepository implements Repository{
 
-    public FileRepository() {
+    private Scanner scanner;
+
+    public FileRepository(Scanner scanner) {
         System.out.println("Utworzenie FileRepository");
+        this.scanner = scanner;
+        System.out.println(scanner);
     }
 
     @Override
