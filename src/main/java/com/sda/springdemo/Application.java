@@ -1,11 +1,16 @@
 package com.sda.springdemo;
 
 public class Application {
-    public void start(){
+
+    private final FileRepository fileRepository = new FileRepository();
+
+    public void start() {
         System.out.println("Start programu");
+        fileRepository.read();
     }
 
-    public void end(){
+    public void end() {
         System.out.println("Koniec programu");
+        fileRepository.write();
     }
 }
