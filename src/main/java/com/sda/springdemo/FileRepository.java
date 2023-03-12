@@ -1,6 +1,14 @@
 package com.sda.springdemo;
+
+import org.springframework.stereotype.Component;
+
 //jak zrobić odczyt/ zapis w pliku
+@Component
 public class FileRepository implements Repository{
+
+    public FileRepository() {
+        System.out.println("Utworzenie FileRepository");
+    }
 
     @Override
     public void read(){
