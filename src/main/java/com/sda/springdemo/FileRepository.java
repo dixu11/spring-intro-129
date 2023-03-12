@@ -3,7 +3,7 @@ package com.sda.springdemo;
 import org.springframework.stereotype.Component;
 
 //jak zrobić odczyt/ zapis w pliku
-@Component
+@Component("File")
 public class FileRepository implements Repository{
 
     public FileRepository() {
