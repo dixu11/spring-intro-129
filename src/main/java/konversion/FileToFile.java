@@ -1,0 +1,11 @@
+package konversion;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileToFile {
+
+
+
+}
