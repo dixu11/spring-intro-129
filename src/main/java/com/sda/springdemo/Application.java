@@ -1,9 +1,14 @@
 package com.sda.springdemo;
 
+//decyduje kiedy zrobi odczyt zapis oraz inne operacje
 public class Application{
 
 //    private final FileRepository fileRepository = new FileRepository();
-    private final Repository repository = new FileRepository();
+    private final Repository repository;
+
+    public Application(Repository repository) {
+        this.repository = repository;
+    }
 
     public void start() {
         System.out.println("Start programu");
