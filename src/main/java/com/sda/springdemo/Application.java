@@ -1,17 +1,17 @@
 package com.sda.springdemo;
 
-public class Application {
+public class Application{
 
 //    private final FileRepository fileRepository = new FileRepository();
-    private final DBRepository dbRepository = new DBRepository();
+    private final Repository repository = new FileRepository();
 
     public void start() {
         System.out.println("Start programu");
-        dbRepository.readFromDB();
+        repository.read();
     }
 
     public void end() {
         System.out.println("Koniec programu");
-        dbRepository.writeToDB();
+        repository.write();
     }
 }

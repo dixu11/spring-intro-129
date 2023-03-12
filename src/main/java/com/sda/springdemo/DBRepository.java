@@ -1,11 +1,13 @@
 package com.sda.springdemo;
 
-public class DBRepository {
-    public void readFromDB(){
+public class DBRepository implements Repository{
+    @Override
+    public void read(){
         System.out.println("Read from DB");
     }
 
-    public void writeToDB(){
+    @Override
+    public void write(){
         System.out.println("Write into DB");
     }
 }
