@@ -2,10 +2,7 @@ package com.sda.springdemo.miniproject;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("toCsv")
 public class ProductRepositoryCsv implements ProductRepository{
 
-    public ProductRepositoryCsv() {
-        System.out.println("CSV");
-    }
 }
