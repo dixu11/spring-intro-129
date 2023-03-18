@@ -5,9 +5,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductParsingService {
 
+    private ProductRepository csvRepo;
+    private ProductRepository jsonRepo;
+
+    public ProductParsingService(ProductRepository csvRepo, ProductRepository jsonRepo) {
+        this.csvRepo = csvRepo;
+        this.jsonRepo = jsonRepo;
+    }
+
     public void convertFile(ConversionType conversionType) {
-        System.out.println("Wykonam konwersję typu:");
-        System.out.println(conversionType);
+
     }
 
 
