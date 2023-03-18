@@ -8,8 +8,8 @@ public class RepositoryTester {
     private final Repository repository;
 
     public RepositoryTester(@Qualifier("File") Repository repository){
-        System.out.println("Utworzenie repositoryTestera");
-        System.out.println(repository);
+       // System.out.println("Utworzenie repositoryTestera");
+      //  System.out.println(repository);
         this.repository = repository;
     }
 

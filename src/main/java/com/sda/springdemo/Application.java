@@ -19,8 +19,8 @@ public class Application{
     // w przypadku jednego konstruktora nie potrzeba adnotacji AUTOWIRED
     @Autowired
     public Application(@Qualifier("File") Repository repository) {
-        System.out.println("Utworzenie application");
-        System.out.println(repository);
+      //  System.out.println("Utworzenie application");
+       // System.out.println(repository);
         this.repository = repository;
     }
 
@@ -29,7 +29,7 @@ public class Application{
         System.out.println("Utworzenie application bez repository");
     }
 
-    @PostConstruct
+   // @PostConstruct
     public void start() {
         System.out.println("Start programu");
         repository.read();

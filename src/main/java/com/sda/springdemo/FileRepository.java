@@ -14,7 +14,7 @@ public class FileRepository implements Repository{
 
     public FileRepository(Scanner scanner) {
         this.scanner = scanner;
-        System.out.println("Utworzenie FileRepository");
+       // System.out.println("Utworzenie FileRepository");
     }
 
     @Override
