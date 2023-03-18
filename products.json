@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Orange-sourceCSV",
+    "quantity": 4,
+    "price": 10.2
+  },
+  {
+    "name": "Apple-sourceCSV",
+    "quantity": 15,
+    "price": 5.4
+  },
+  {
+    "name": "Orange-sourceCSV",
+    "quantity": 20,
+    "price": 6.2
+  }
+]
