@@ -8,6 +8,11 @@ import java.util.Scanner;
 @Component
 public class ProductParsingController {
 
+  private   ProductParsingService service;
+
+    public ProductParsingController(ProductParsingService service) {
+        this.service = service;
+    }
 
     @PostConstruct
     public void executeMenu() {
@@ -22,6 +27,21 @@ public class ProductParsingController {
         String input = scanner.nextLine();
         System.out.println("Wybrałeś: ");
         System.out.println(input);
+
+        ConversionType conversionType;
+        switch (input){
+            case "csv":
+                conversionType = ConversionType.JSON_TO_CSV;
+                break;
+            case "json":
+                conversionType = ConversionType.CSV_TO_JSON;
+                break;
+            default:
+                System.out.println("Błąd! Podaj 'csv' lub 'json'");
+                executeMenu();
+                return;
+        }
+        service.convertFile(conversionType);
     }
 
 
